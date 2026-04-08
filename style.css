@@ -1,0 +1,63 @@
+
+body { 
+    background-color:indianred;
+    background-image: linear-gradient(to bottom, #D90B0B 10%, #D92929, #D95F5F, #D99696, #F2F2F2 );
+    background-attachment: fixed;
+}
+footer{
+    background-color: brown;
+    margin-right: 100px;
+    border-radius: 50px;
+    margin-left: 100px;
+    box-shadow: -3px 2px 15px 0px;
+    min-height: 280px;
+    max-height: 958px;
+}
+footer > img {
+     /*fundo da imagem */
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: -3px 2px 15px 0px;
+    
+    /*tamanho da imagem */
+    width: 200px;
+    height: 200px;
+    
+    /*imagem no centro */
+    display: block;
+    margin: auto;
+}
+footer p {
+    /*coloquei os links no centro */
+    text-align: center;
+}
+footer p > a {
+    /*tirei o underline e sparei os 2 */
+    margin-right: 100px;
+    margin-left: 56px;
+    color: white;
+    text-decoration: none;
+     min-height: 280px;
+    max-height: 958px;
+}
+footer p > a:hover{
+    /*Quando passar o mouse em cima */
+    text-decoration: underline;
+    background-color: #D99696;  
+    border-radius: 10px;  
+    transition-duration: 0.5s;
+
+}
+footer p > a:active{
+    /*Guando segurar*/
+    color: #7a0101;
+}
+main{
+    /*Materia decorada*/
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+}
