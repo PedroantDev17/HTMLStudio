@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family:'Designer' ;
+    src: url(../fonts/designer_2/Designer.otf) format(opentype);
+}
+
+:root{
+    --color-red:#D90B0B;
+    --color-red-claro:#D92929;
+    --color-red-claro2:#D95f5f;
+    --color-redclaro3:#d99696;
+    --color-white:#f2f2f2;
+    --font:'Designer';
+}
+*{
+    font-family: var(--font);
+}
+body{
+    background-image: linear-gradient(to bottom, #880404, #a76a6a);
+    background-attachment: fixed;
+}
+div{
+    display: grid;
+    justify-content: center;
+margin: auto;
+}
+ #container{
+
+ }
+
+ #container > img{
+    width: 200px;
+ }
+ #contanier .login{
+    display: inline;
+
+ }
+
