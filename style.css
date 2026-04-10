@@ -29,7 +29,7 @@ menu{
     grid-auto-flow: column;
     justify-content: start;
     align-items: end;
-    background-color: white;
+    background-image: linear-gradient(to left, white 25%, transparent);
     box-shadow: 0px 5px 10px black;
 }
 
@@ -37,7 +37,7 @@ menu{
 menu > .User{
     width: 100px;
     border-radius: 50%;
-    border: 5px groove  black;
+    border: 5px solid black;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 500px;
@@ -53,7 +53,9 @@ menu .logo {
     margin-right: 10px;
     box-shadow: 1px 2px 5px black;
     border-radius: 10%;
-    margin:10px 
+    margin:10px;
+    width: 190px;
+    height: 138px;
 }
 menu  h1 {
     font-family: var(--font);
@@ -74,5 +76,6 @@ header >  main > #container .item{
     background-color: white;
         margin: 20px 0px 0px 20px;
         border-radius: 10px;
-        width: 500px;
+        width: 450px;
+        box-shadow: 1px 2px 4px 2px black;
 }
