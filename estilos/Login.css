@@ -12,20 +12,23 @@
     --color-white:#f2f2f2;
     --font:'Designer';
 }
+
 *{
     font-family: var(--font);
 }
+
 body{
+    display: grid;
+    justify-content: center;
+    margin-top: 310px;
+
     background-image: linear-gradient(to bottom, #880404, #a76a6a);
     background-attachment: fixed;
 }
-div{
-    display: grid;
-    justify-content: center;
-margin: auto;
-}
  #container{
-
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 10px;
  }
 
  #container > img{
@@ -33,6 +36,6 @@ margin: auto;
  }
  #contanier .login{
     display: inline;
-
+    margin-bottom: 10px;
  }
 
