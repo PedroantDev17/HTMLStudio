@@ -20,11 +20,15 @@
 body{
     display: grid;
     justify-content: center;
-    margin-top: 310px;
+    margin-top: 28vh;
 
     background-image: linear-gradient(to bottom, #880404, #a76a6a);
     background-attachment: fixed;
 }
+.login {
+    text-align: center;
+}
+
  #container{
     box-shadow: 3px 5px 12px;
     border-radius: 15px;
@@ -37,5 +41,9 @@ body{
  #contanier .login{
     display: inline;
     margin-bottom: 10px;
+ }
+.login button{
+    margin: 10px 0px 10px 0px;
+    background-color: transparent;
  }
 
