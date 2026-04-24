@@ -18,6 +18,8 @@
 }
 
 body{
+    font-family: Arial, Helvetica, sans-serif;
+    
     display: grid;
     justify-content: center;
     margin-top: 28vh;
@@ -27,6 +29,7 @@ body{
 }
 .login {
     text-align: center;
+    margin: 0px 25px 25px;
 }
 
  #container{
@@ -36,14 +39,33 @@ body{
  }
 
  #container > img{
-    width: 200px;
+    width: 250px;
+    height: 250px;
  }
  #contanier .login{
     display: inline;
-    margin-bottom: 10px;
  }
+
+ .login input{
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    
+ }
+ ::placeholder{
+    color:rgb(184, 177, 177);
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 3px 2px 5px #D90B0B;
+ }
+ 
 .login button{
     margin: 10px 0px 10px 0px;
     background-color: transparent;
+    font-size: 20px;
  }
-
+.login button:hover{
+    color: white;
+    transition: 0.5s;
+    text-shadow: 2px 1px 0px black;
+}
