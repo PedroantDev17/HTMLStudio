@@ -25,12 +25,11 @@ body {
     display: block;
 }
 menu{
- display: grid;
+     display: grid;
     grid-auto-flow: column;
-    justify-content: start;
-    align-items: end;
     background-image: linear-gradient(to left, white 25%, transparent);
     box-shadow: 0px 5px 10px black;
+    justify-content: stretch;
 }
 
 
@@ -40,7 +39,6 @@ menu > .User{
     border: 5px solid black;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 500px;
     margin-left: 10px;
     
 }
