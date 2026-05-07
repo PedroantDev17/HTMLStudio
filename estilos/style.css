@@ -23,6 +23,7 @@ body {
     background-image: linear-gradient(to bottom, #D90B0B 10%, #D92929, #D95F5F, #D99696, #F2F2F2 );
     background-attachment: fixed;
     display: block;
+
 }
 menu{
      display: grid;
