@@ -53,7 +53,7 @@ body::before {
         align-items: center;
         filter: drop-shadow(2px 3px 21px white);
         background-size: 83%;
-        opacity: 0.5;
+        opacity: 0.4;
         z-index: 1;
 }
 
