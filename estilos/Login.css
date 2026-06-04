@@ -73,13 +73,15 @@ body{
     text-shadow: 3px 2px 5px #D90B0B;
  }
  
-.login button{
+.login form > #ienviar {
+     
     margin: 10px 0px 10px 0px;
     background-color: transparent;
     font-size: 20px;
- }
-.login button:hover{
-    color: white;
-    transition: 0.5s;
     text-shadow: 2px 1px 0px black;
+ }
+.login > form > #ienviar:hover{
+    background-color: black;
+    transition: 0.5s;
+    
 }
