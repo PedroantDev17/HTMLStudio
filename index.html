@@ -14,13 +14,15 @@
         <img src="imagens/image-removebg-Logo.png" alt="Logo">
 
         <div class="login">
-            <p><label for="iemail">Email:</label></p>
-            <p><input type="email" name="email" id="iemail" placeholder="Email"></p>
-
-            <p><label for="isenha">Senha:</label></p>
-            <p><input type="password" name="senha" id="isenha" placeholder="Sua senha"></p>
-            <br>
-            <input type="submit" value="Entrar">
+            <form action="HTML Studio ©.html" autocomplete="off" method="post">
+                <p><label for="iemail">Email:</label></p>
+                <p><input type="email" name="email" id="iemail" placeholder="Email" required autocapitalize="email"></p>
+                <p><label for="isenha">Senha:</label></p>
+                <p><input type="password" name="senha" id="isenha" placeholder="Sua senha"  required autocapitalize="password" minlength="5" maxlength="10"></p>
+                <br>
+                <input type="submit" value="Entrar">
+            </form>
+            
         </div>
     </div>
 </body>
