@@ -18,9 +18,9 @@
                 <p><label for="iemail">Email:</label></p>
                 <p><input type="email" name="email" id="iemail" placeholder="Email" required autocapitalize="email"></p>
                 <p><label for="isenha">Senha:</label></p>
-                <p><input type="password" name="senha" id="isenha" placeholder="Sua senha"  required autocapitalize="password" minlength="5" maxlength="10"></p>
+                <p><input type="password" name="senha" id="isenha" placeholder="Sua senha"  required autocapitalize="password" minlength="5"></p>
                 <br>
-                <input type="submit" value="Entrar" id="ienviar" onclick="enviar()">
+                <input type="submit" value="Entrar" id="ienviar" onclick="return enviar()">
             </form>  
         </div>
     </div>
@@ -30,15 +30,32 @@
         let gmail= document.getElementById('iemail')
         let senha = document.getElementById('isenha')
 
-        let Email = name.value
+        let Email = gmail.value
         let Senha = senha.value
         
             if (Email.length < 5 || Senha.length < 5) {
                 window.alert('Cadastro errados!, tente novamente')
-            } else if (!Email.includes('@')){
-                window.alert('Faltou @, tente novamente!')
+                return false;
+            }else if(Email.length > 50) {
+                window.alert('Seu email passou de 50 caracteres!')
+                return false;
+            } 
+            else if (!/[a-zA-Z]/,/[0-9]/.test(Email)){
+                window.alert('Acrescente mais caracteres no Email')
+                return false;
+           }else if (!Email.includes('@')){
+            window.alert('Acrescente @ no email!')
+                return false;
+           }
+            else if (!/[a-zA-Z]/.test(Senha) || !/[0-9]/.test(Senha)){
+                window.alert('A senha deve conter letras e números!')
+                return false;
+            }else{
+
             }
-        }
+            return true;
+        } 
+        
     </script>
 </body>
 </html>
