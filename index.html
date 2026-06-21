@@ -13,7 +13,7 @@
         
         <img src="imagens/image-removebg-Logo.png" alt="Logo">
 
-        <div class="login">
+        <div  class="login">
             <form action="HTML Studio ©.html" autocomplete="off" method="post">
                 <p><label for="iemail">Email:</label></p>
                 <p><input type="email" name="email" id="iemail" placeholder="Email" required autocapitalize="email"></p>
@@ -24,5 +24,21 @@
             </form>  
         </div>
     </div>
+
+    <script>
+        function enviar() {
+        let gmail= document.getElementById('iemail')
+        let senha = document.getElementById('isenha')
+
+        let Email = name.value
+        let Senha = senha.value
+        
+            if (Email.length < 5 || Senha.length < 5) {
+                window.alert('Cadastro errados!, tente novamente')
+            } else if (!Email.includes('@')){
+                window.alert('Faltou @, tente novamente!')
+            }
+        }
+    </script>
 </body>
 </html>
