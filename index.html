@@ -51,7 +51,16 @@
                 window.alert('A senha deve conter letras e números!')
                 return false;
             }else{
-                
+                fetch('https://commute-doormat-operator.ngrok-free.dev/cadastro',{
+                    method:'POST',
+                    headers: {
+                        'content-Type':'application/json'
+                    },
+                    body:JSON.stringify({
+                        'email':Email,
+                        'senha':Senha
+                    })
+                })
             }
             return true;
         } 
