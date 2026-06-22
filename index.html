@@ -48,9 +48,11 @@
                 return false;
            }
             else if (!/[a-zA-Z]/.test(Senha) || !/[0-9]/.test(Senha)){
-                window.alert('A senha deve conter letras e números!')
+                window.alert(`A senha deve conter letras e números!`)
                 return false;
             }else{
+                window.alert('Login feito com Sucesso!')
+                
                 fetch('https://commute-doormat-operator.ngrok-free.dev/cadastro',{
                     method:'POST',
                     headers: {
