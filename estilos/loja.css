@@ -25,43 +25,49 @@ body {
     display: block;
 
 }
-menu{
+header{
      display: grid;
     grid-auto-flow: column;
     background-image: linear-gradient(to left, white 25%, transparent);
     box-shadow: 0px 5px 10px black;
     justify-content: stretch;
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 
-menu > .User{
-    width: 100px;
+header > .User{
+    width: 58px;
     border-radius: 50%;
-    border: 5px solid black;
+    border: 1px solid black;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
     
 }
-header main{
+ main{
    display: grid;
     
 }
 
-menu .logo {
+header .logo {
     margin-right: 10px;
     box-shadow: 1px 2px 5px black;
     border-radius: 10%;
     margin:10px;
-    width: 190px;
-    height: 138px;
+    width: 135px;
+    height: 100px;
 }
-menu  h1 {
+ h1 {
     font-family: var(--font);
     text-shadow: 1px 2px 3px var(--color-white);
 }
 
-header > main #container{
+ #container{
     display: inline-flex;
     justify-items: center;
     align-content: center;
@@ -71,7 +77,7 @@ header > main #container{
 
 }
 
-header >  main > #container .item{
+ main > #container .item{
     background-color: white;
         margin: 20px 0px 0px 20px;
         border-radius: 10px;
