@@ -32,6 +32,9 @@ header{
     background-image: linear-gradient(to left, white 25%,red);
     box-shadow: 0px 5px 10px black;
     justify-content: stretch;
+
+    max-width: 100%;
+    min-width: none;
     
     position: sticky;
     
