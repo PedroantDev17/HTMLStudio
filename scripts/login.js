@@ -15,7 +15,7 @@ function enviar(event) {
             window.alert('Seu email passou de 50 caracteres!')
                 return false;
         } 
-        else if (!/[a-zA-Z]/,/[0-9]/.test(Email)){
+        else if (!/[a-zA-Z]/.test(Email) || /[0-9]/.test(Email)){
             window.alert('Acrescente mais caracteres no Email')
                 return false;
         }
