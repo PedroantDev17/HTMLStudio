@@ -25,20 +25,21 @@ body {
     display: block;
 
 }
+
 header{
      display: grid;
     grid-auto-flow: column;
-    background-image: linear-gradient(to left, white 25%, transparent);
+    background-image: linear-gradient(to left, white 25%,red);
     box-shadow: 0px 5px 10px black;
     justify-content: stretch;
     
     position: sticky;
+    
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
 }
-
 
 header > .User{
     width: 58px;
@@ -49,6 +50,7 @@ header > .User{
     margin-left: 10px;
     
 }
+
  main{
    display: grid;
     
