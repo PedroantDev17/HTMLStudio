@@ -14,17 +14,17 @@
         <img src="imagens/image-removebg-Logo.png" alt="Logo">
 
         <div  class="login">
-            <form action="HTML Studio ©.html" autocomplete="off" method="post">
+            <form action="#" autocomplete="off" method="post" onsubmit="return enviar(event)">
                 <p><label for="iemail">Email:</label></p>
-                <p><input type="email" name="email" id="iemail" placeholder="Email" required autocapitalize="email"></p>
+                <p><input type="email" name="email" id="iemail" placeholder="Email" required></p>
                 <p><label for="isenha">Senha:</label></p>
-                <p><input type="password" name="senha" id="isenha" placeholder="Sua senha" required autocapitalize="password" minlength="5"></p>
+                <p><input type="password" name="senha" id="isenha" placeholder="Sua senha" required minlength="5"></p>
                 <br>
-                <input type="submit" value="Entrar" id="ienviar" onclick="return enviar()">
+                <input type="submit" value="Entrar" id="ienviar">
             </form>  
         </div>
     </div>
 
 </body>
-<script src="scripts/script.js"></script>
+<script src="scripts/login.js"></script>
 </html>
