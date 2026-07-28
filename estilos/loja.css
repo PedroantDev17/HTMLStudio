@@ -27,6 +27,8 @@ body {
 }
 
 header{
+    margin: 0;
+    padding: 0;
      display: grid;
     grid-auto-flow: column;
     background-image: linear-gradient(to left, white 25%,red);
@@ -56,6 +58,7 @@ header > .User{
 
  main{
    display: grid;
+   margin-top: 0;
     
 }
 
