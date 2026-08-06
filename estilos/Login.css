@@ -53,6 +53,18 @@ body{
     width: 55vh;
     
  }
+@media screen and (max-width:500px) {
+    #container{
+    display: grid;
+    justify-items: center;
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 30vh;
+
+ }
+ }
+ 
 
  #container > img{
 
