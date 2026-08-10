@@ -18,7 +18,7 @@
     padding: 0;
    
 }
-
+ 
 body{
     display: flex;
     justify-content: center; /* Centraliza na horizontal */
@@ -31,11 +31,11 @@ body{
 
 .termos-de-uso {
     text-align: center;
-    margin: 0px 10px 10px;
+    
    font-size: small;
 
    width: 100%;
-   max-width: 800px;
+  
    margin: 0 auto;
    padding: 20px;
    box-sizing: border-box;
@@ -75,7 +75,30 @@ body{
    color: #330000;
    font-size: 1rem;
  }
- 
+
+ @media screen and (max-width:500px) {
+   .termos-de-uso{
+      text-align: center;
+      font-size: small;
+      width: 94%;
+      margin: 0 auto;
+      
+      box-sizing: border-box;
+   }
+    #container {
+    display: grid;
+    justify-items: center;
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 59vh;
+    min-width: 61vh;
+    max-width: 85vh;
+}
+ h1,h2{
+   font-size: 1.24em;
+ } 
+}
 
 
 
