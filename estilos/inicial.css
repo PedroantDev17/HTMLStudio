@@ -36,7 +36,7 @@ body{
     
     img{
         width: 115vh;
-        box-shadow: 2px 2.5px 3px black;
+        box-shadow: 2px 2.5px 3px rgba(0, 0, 0, 0.455);
         margin: 25px;
         border-radius: 10px;
         opacity: 0.94;
@@ -45,7 +45,7 @@ body{
     .pagina{
            padding: 15px;
             border-radius: 5px;
-            box-shadow: 2px 2.5px 3px black;
+            box-shadow: 2px 2.5px 3px rgba(0, 0, 0, 0.498);
             width: 50vh;
             height: 50vh;
             text-align: center;
@@ -57,19 +57,23 @@ body{
             margin: 10px;
             background-color: #D90B0B;
 }
-    input{
-        margin:10px 15px;
-        border-radius: 5px;
-        padding: 10px;
-    }
-.enviar{
-    border: 1px solid black;
-}
-.enviar:hover{
+button {
+    padding: 4vh 10vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
     transition: 0.5s;
-    color: white;
-    background-color: #ff000088;
 }
-.enviar:active{
+button:hover{
+    background-color: #D92929;
+    color: var(--color-white);
+    box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.355);
+}
+button:active{
+    transition: none;
     color: black;
+}
+.User {
+    margin-top: 5vh;
+    padding: 4vh 11vh;
 }
