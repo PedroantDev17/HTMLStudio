@@ -77,3 +77,15 @@ button:active{
     margin-top: 5vh;
     padding: 4vh 11vh;
 }
+
+@media screen and (max-width:500px) {
+    .container{
+        display: grid;
+        grid-auto-flow: row;
+        justify-items: center;
+
+    }
+    img{
+        width: 85%;
+    }
+}
