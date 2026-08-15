@@ -15,6 +15,8 @@
 
 *{
     font-family: var(--font);
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -78,14 +80,19 @@ button:active{
     padding: 4vh 11vh;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:500px), (max-width:800px),(max-width:1300px){
     .container{
         display: grid;
         grid-auto-flow: row;
         justify-items: center;
-
+        position: relative;
+        top: -10vh;
     }
     img{
-        width: 85%;
+        width: 82%;
+        margin: 0;
+
+
     }
 }
+
