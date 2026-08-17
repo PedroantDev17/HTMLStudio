@@ -32,9 +32,10 @@ body{
     align-items: center;     /* Centraliza na vertical */
     overflow: hidden;
     position: relative;
-    background: radial-gradient(circle, #ff4d4d 0%, #330000 100%);
+   
 
     flex-direction: column;
+    animation: mudarCor 60s infinite linear;
 }
 
 .login {
@@ -108,4 +109,24 @@ a:hover{
     text-decoration: underline #D90B0B;
     color: #330000;
     text-shadow: 1px 1.5px 2.5px white;
+}
+
+
+@media screen and (max-width:500px), (max-width:800px),(max-width:1300px) {
+    #container {
+    display: grid;
+    justify-items: center;
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 38vh;
+}
+}
+
+@keyframes mudarCor {
+    0% { background: radial-gradient(circle, #ff4d4d 0%, #330000 100%);} 
+
+    30%  { background: radial-gradient(circle, #ff4d4d 10%, #330000 100%) } 
+    80%  { background: radial-gradient(circle, #ff4d4d 15%, #330000 100%) } 
+    100%  { background: radial-gradient(circle, #ff4d4d 20%, #330000 100%) } 
 }
