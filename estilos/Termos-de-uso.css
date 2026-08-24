@@ -11,6 +11,13 @@
     --color-white:#f2f2f2;
     --font:'Designer';
 }
+[tema-data="escuro"] {
+     --color-red:#1a1818;
+    --color-red-claro:#383737;
+    --color-red-claro2:#645f5f;
+    --color-redclaro3:#9c9999;
+    --color-white:#f2f2f2;
+}
 
 *{
     font-family: var(--font);

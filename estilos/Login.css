@@ -5,12 +5,23 @@
 }
 
 :root{
+    --color-red-escuro:#330000;
     --color-red:#D90B0B;
     --color-red-claro:#D92929;
     --color-red-claro2:#D95f5f;
     --color-redclaro3:#d99696;
     --color-white:#f2f2f2;
+    --color-black:black;
     --font:'Designer';
+}
+[tema-data="escuro"] {
+    --color-red-escuro:#181818;
+     --color-red:#1a1818;
+    --color-red-claro:#383737;
+    --color-red-claro2:#645f5f;
+    --color-redclaro3:#9c9999;
+    --color-white:#f2f2f2;
+     --color-black:rgb(204, 204, 204);
 }
 
 *{
@@ -25,6 +36,7 @@ html, body {
 }
 
 body{
+      background: radial-gradient(circle, var(--color-red-claro) 0%, var(--color-red-escuro));
     height: 100vh; /* Ocupa toda a altura da tela */
     width: 100vw;  /* Ocupa toda a largura da tela */
     display: flex;
@@ -38,6 +50,22 @@ body{
     animation: mudarCor 60s infinite linear;
 }
 
+ .btn {
+    background-color: var(--color-white);
+    padding: 2vh 2vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    top: 5vh;
+    left: 12vh;
+}
+.btn:hover{
+    background-color: var(--color-red-claro);
+    transition: 0.5s;
+    box-shadow: 1px 1.5px 5.5px var(--color-white);
+}
 .login {
     text-align: center;
     margin: 0px 25px 25px;
@@ -77,7 +105,7 @@ body{
 
  .login input{
     background-color: transparent;
-    color: white;
+    color: var(--color-white);
     border-radius: 10px;
     
  }
@@ -85,7 +113,7 @@ body{
     color:rgb(184, 177, 177);
     letter-spacing: 4px;
     text-align: center;
-    text-shadow: 3px 2px 5px #D90B0B;
+    text-shadow: 3px 2px 5px var(--color-red);
  }
  
 .login form > #ienviar {
@@ -96,7 +124,7 @@ body{
     text-shadow: 2px 1px 0px black;
  }
 .login > form > #ienviar:hover{
-    background-color: black;
+    background-color: var(--color-black);
     transition: 0.5s;
 }
 
@@ -106,9 +134,9 @@ a {
 }
 a:hover{
     transition: 0.5s;
-    text-decoration: underline #D90B0B;
-    color: #330000;
-    text-shadow: 1px 1.5px 2.5px white;
+    text-decoration: underline var(--color-red);
+    color: var(--color-red-escuro);
+    text-shadow: 1px 1.5px 2.5px var(--color-white);
 }
 
 
@@ -121,12 +149,4 @@ a:hover{
     margin: 10px;
     width: 38vh;
 }
-}
-
-@keyframes mudarCor {
-    0% { background: radial-gradient(circle, #ff4d4d 0%, #330000 100%);} 
-
-    30%  { background: radial-gradient(circle, #ff4d4d 10%, #330000 100%) } 
-    80%  { background: radial-gradient(circle, #ff4d4d 15%, #330000 100%) } 
-    100%  { background: radial-gradient(circle, #ff4d4d 20%, #330000 100%) } 
 }
