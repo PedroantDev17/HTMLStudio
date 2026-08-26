@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/Login.css">
+    <link rel="shortcut icon" href="../favicon_io/favicon.ico" type="image/x-icon">
+    <title>Login</title>
+    
+</head>
+<body>
+    <header>
+        <button id="ibtn" class="btn">Mudar tema 🌓</button>
+    </header>
+    
+    <div id="container">
+        
+        <img src="../imagens/image-removebg-Logo.png" alt="Logo">
+
+        <div  class="login">
+            <form action="#" autocomplete="off" method="post" onsubmit="return Login(event)">
+                <p><label for="iemail">Email:</label></p>
+                <p><input type="email" name="email" id="iemail" placeholder="Email" required></p>
+                <p><label for="isenha">Senha:</label></p>
+                <p><input type="password" name="senha" id="isenha" placeholder="Sua senha" required minlength="5"></p>
+                <br>
+                <input type="submit" value="Entrar" id="ienviar">
+            </form>  
+            <a href="../cadastro.html">Não tem conta ?</a>
+        </div>
+    </div>
+    <footer>
+        <a href="../termos-de-uso.html" target="_blank">termos de uso</a>
+    </footer>
+
+</body>
+    <script src="../scripts/login.js" defer></script>
+</html>

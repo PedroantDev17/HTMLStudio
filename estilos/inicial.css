@@ -4,21 +4,26 @@
     src: url(../fonts/designer_2/Designer.otf) format(opentype);
 }
 
+
 :root{
+    --color-red-escuro:#330000;
     --color-red:#D90B0B;
     --color-red-claro:#D92929;
     --color-red-claro2:#D95f5f;
     --color-redclaro3:#d99696;
     --color-white:#f2f2f2;
+    --color-black:black;
     --font:'Designer';
 }
 
 [tema-data="escuro"] {
+    --color-red-escuro:#181818;
      --color-red:#1a1818;
     --color-red-claro:#383737;
     --color-red-claro2:#645f5f;
     --color-redclaro3:#9c9999;
     --color-white:#f2f2f2;
+     --color-black:rgb(0, 0, 0);
 }
 
 *{
@@ -29,12 +34,11 @@
 }
 
 body{
+    margin: 15vh auto;
     display: grid;
     justify-content: center;
-    position: fixed;
-    top: 18%;
-    background-color:var(--color-red);
-    left: 5%;
+    align-items: center;
+    background: radial-gradient(circle, var(--color-red-claro) 0%, var(--color-red-escuro) 100%);
 
     }
     h2 {
@@ -69,7 +73,7 @@ body{
             align-content: center;
             font-size: 30px;
             margin: 10px;
-            background-color: var(--color-red);
+            background-image: linear-gradient(var(--color-red) 10%, var(--color-red-escuro));
 }
 button {
     padding: 4vh 10vh;

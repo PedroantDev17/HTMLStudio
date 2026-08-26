@@ -54,6 +54,7 @@ function cadastro(event) {
         }
 } 
 
+// Mudar tema 
 const root = document.documentElement;
 const btn = document.getElementById("ibtn");
 
