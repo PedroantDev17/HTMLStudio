@@ -1,0 +1,152 @@
+
+@font-face {
+    font-family:'Designer' ;
+    src: url(../fonts/designer_2/Designer.otf) format(opentype);
+}
+
+:root{
+    --color-red-escuro:#330000;
+    --color-red:#D90B0B;
+    --color-red-claro:#D92929;
+    --color-red-claro2:#D95f5f;
+    --color-redclaro3:#d99696;
+    --color-white:#f2f2f2;
+    --color-black:black;
+    --font:'Designer';
+}
+[tema-data="escuro"] {
+    --color-red-escuro:#181818;
+     --color-red:#1a1818;
+    --color-red-claro:#383737;
+    --color-red-claro2:#645f5f;
+    --color-redclaro3:#9c9999;
+    --color-white:#f2f2f2;
+     --color-black:rgb(0, 0, 0);
+}
+
+*{
+    font-family: var(--font);
+
+   
+}
+
+html, body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  overflow: hidden; /* Remove o "rolamento" */
+}
+
+body{
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw;  /* Ocupa toda a largura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle, var(--color-red-claro) 0%, var(--color-red-escuro) 100%);
+    flex-direction: column;
+}
+ .btn {
+    background-color: var(--color-white);
+    padding: 2vh 2vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    top: 5vh;
+    left: 12vh;
+}
+.btn:hover{
+    background-color: var(--color-red-claro);
+    transition: 0.5s;
+    box-shadow: 1px 1.5px 5.5px var(--color-white);
+}
+
+.login {
+    text-align: center;
+    margin: 0px 10px 10px;
+}
+
+ #container{
+    display: grid;
+    justify-items: center;
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 55vh;
+    
+ }
+
+ @media screen and (max-width:500px) {
+    #container{
+    display: grid;
+    justify-items: center;
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 50vh;
+
+ }
+ }
+
+ #container > img{
+
+    width: 250px;
+    height: 250px;
+ }
+ #contanier .login{
+    display: inline;
+ }
+
+ .login input{
+    background-color: transparent;
+    color: var(--color-white);
+    border-radius: 10px;
+    
+ }
+ ::placeholder{
+    color:rgb(212, 202, 202);
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 3px 2px 5px var(--color-red);
+ }
+ 
+.login form > #ienviar {
+     
+    margin: 10px 0px 10px 0px;
+    background-color: transparent;
+    font-size: 20px;
+    text-shadow: 2px 1px 0px var(--color-black);
+ }
+.login > form > #ienviar:hover{
+    background-color: var(--color-black);
+    transition: 0.5s;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.5s;
+    text-decoration: underline var(--color-red);
+    color: #330000;
+    text-shadow: 1px 1.5px 2.5px var(--color-white);
+}
+
+
+@media screen and (max-width:500px), (max-width:800px),(max-width:1300px) {
+    #container {
+    display: grid;
+    justify-items: center;
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 38vh;
+}
+}
+
+

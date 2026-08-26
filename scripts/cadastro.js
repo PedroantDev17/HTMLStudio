@@ -78,6 +78,7 @@ async function buscarDados() {
 // Executa a função
 buscarDados();
 
+// Mudar tema 
 const root = document.documentElement;
 const btn = document.getElementById("ibtn");
 
