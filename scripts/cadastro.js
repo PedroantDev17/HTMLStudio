@@ -53,6 +53,30 @@ function cadastro(event) {
             return false;
         }
 } 
+// Pegando resposta //
+async function buscarDados() {
+  try {
+    // 1. Faz a requisição para a URL da API
+    const response = await fetch('https://commute-doormat-operator.ngrok-free.dev/dados');
+    
+    // 2. Verifica se a resposta foi bem-sucedida (status 200-299)
+    if (!response.ok) {
+      throw new Error(`Erro na requisição: ${response.status}`);
+    }
+    
+    // 3. Converte a resposta bruta em um objeto JSON do JavaScript
+    const dados = await response.json();
+    
+    // 4. Utiliza os dados recebidos
+    console.log(dados);
+  } catch (error) {
+    // Trata possíveis erros de rede ou de conversão
+    console.error('Ocorreu um erro:', error);
+  }
+}
+
+// Executa a função
+buscarDados();
 
 // Mudar tema 
 const root = document.documentElement;
