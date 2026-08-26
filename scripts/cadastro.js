@@ -35,7 +35,7 @@ function cadastro(event) {
         else{
             window.alert('Login feito com Sucesso!')
 
-             window.location.assign("index.html");
+             window.location.assign("loja.html");
             
             
              fetch('https://commute-doormat-operator.ngrok-free.dev/dados',{
