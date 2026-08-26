@@ -34,7 +34,7 @@
 }
 
 body{
-    margin: 15vh auto;
+    margin: 11vh auto;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -97,13 +97,25 @@ button:active{
     border: none;
     cursor: pointer;
     transition: 0.5s;
-    position: absolute;
-    top: -15vh;
-    left: -6vh;
 }
+
 .User {
     margin-top: 5vh;
     padding: 4vh 11vh;
+}
+footer{
+    display: grid;
+    justify-content: center;
+  
+}
+footer a {
+     text-decoration: none;
+   color: var(--color-white);
+}
+footer a:hover {
+    text-decoration: underline;
+    color: var(--color-red-claro);
+    text-shadow: 1px 1px 2px var(--color-black);
 }
 
 @media screen and (max-width:500px), (max-width:800px),(max-width:1300px){
