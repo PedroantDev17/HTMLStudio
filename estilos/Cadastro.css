@@ -80,18 +80,6 @@ body{
     
  }
 
- @media screen and (max-width:500px) {
-    #container{
-    display: grid;
-    justify-items: center;
-    box-shadow: 3px 5px 12px;
-    border-radius: 15px;
-    margin: 10px;
-    width: 50vh;
-
- }
- }
-
  #container > img{
 
     width: 250px;
@@ -136,9 +124,58 @@ a:hover{
     color: #330000;
     text-shadow: 1px 1.5px 2.5px var(--color-white);
 }
+@media screen and (max-width:1024px) {
+    #container {
+    display: grid;
+    justify-items: center;
+    box-shadow: 3px 5px 12px;
+    border-radius: 15px;
+    margin: 4px;
+    width: 70vh;
+    }
+
+    #container > img {
+    width: 22vh;
+    height: 22vh;
+}
+.login  p {
+    margin: 10px auto;
+    font-size: 15px;
+}
+
+.login {
+    text-align: center;
+        margin: 0px 4px;
+   
+   
+}
+.login input {
+    background-color: transparent;
+    color: var(--color-white);
+    border-radius: 10px;
+}
+
+.login form > #ienviar {
+     
+    margin: 10px 0px 10px 0px;
+    background-color: transparent;
+    font-size: 15px;
+    text-shadow: 2px 1px 0px var(--color-black);
+ }
+
+ a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+ 
+
+ 
+
+}
 
 
-@media screen and (max-width:500px), (max-width:800px),(max-width:1300px) {
+@media screen and (max-width:500px) {
     #container {
     display: grid;
     justify-items: center;
@@ -146,6 +183,36 @@ a:hover{
     border-radius: 15px;
     margin: 10px;
     width: 38vh;
+}
+.login  p {
+    margin: 10px auto;
+    font-size: 15px;
+}
+
+.login {
+    text-align: center;
+        margin: 10px 4px;
+   
+   
+}
+.login input {
+    background-color: transparent;
+    color: var(--color-white);
+    border-radius: 10px;
+}
+
+.login form > #ienviar {
+     
+    margin: 10px 0px 10px 0px;
+    background-color: transparent;
+    font-size: 15px;
+    text-shadow: 2px 1px 0px var(--color-black);
+ }
+
+ a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
 }
 }
 

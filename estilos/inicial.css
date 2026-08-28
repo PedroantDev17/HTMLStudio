@@ -34,7 +34,7 @@
 }
 
 body{
-    margin: 11vh auto;
+    margin: 10vh auto;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -118,14 +118,102 @@ footer a:hover {
     text-shadow: 1px 1px 2px var(--color-black);
 }
 
-@media screen and (max-width:500px), (max-width:800px),(max-width:1300px){
+@media screen and (max-width:1024px), (max-width:769px){
+    
+body{
+    margin: 5vh auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, var(--color-red-claro) 0%, var(--color-red-escuro) 100%);
+
+    }
+    h2 {
+        margin: 10px ;
+    }
+    .container{
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+    img{
+        width: 115vh;
+        box-shadow: 2px 2.5px 3px rgba(0, 0, 0, 0.455);
+        margin: 5vh;
+        border-radius: 10px;
+        opacity: 0.94;
+    
+    }
+    .pagina{
+           padding: 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2.5px 3px rgba(0, 0, 0, 0.498);
+            width: 50vh;
+            height: 50vh;
+            text-align: center;
+            display: grid;
+            grid-auto-flow: row;
+            justify-content: center;
+            align-content: center;
+            font-size: 30px;
+            margin: 10px;
+            background-image: linear-gradient(var(--color-red) 10%, var(--color-red-escuro));
+}
+button {
+    padding: 4vh 5vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: var(--color-red-claro);
+    color: var(--color-white);
+    box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.355);
+}
+button:active{
+    transition: none;
+    color: black;
+}
+.btn{
+    padding: 2vh 2vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.User {
+    margin-top: 5vh;
+    padding: 4vh 7.5vh;
+}
+footer{
+    display: grid;
+    justify-content: center;
+  
+}
+footer a {
+     text-decoration: none;
+   color: var(--color-white);
+}
+footer a:hover {
+    text-decoration: underline;
+    color: var(--color-red-claro);
+    text-shadow: 1px 1px 2px var(--color-black);
+}
+
+}
+
+@media screen and (max-width:600px),(max-width:768px){
     .container{
         display: grid;
         grid-auto-flow: row;
         justify-items: center;
         justify-content: center;
-        position: relative;
-        top: -10vh;
+        
     }
     img{
         width: 82%;
@@ -149,6 +237,14 @@ footer a:hover {
         margin: 10px;
         background-color: var(--color-red);
     }
+    .btn{
+    padding: 2vh 2vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 10px 20px;
+    }
 
     button {
     padding: 2vh 7vh;
@@ -162,5 +258,7 @@ footer a:hover {
     margin-top: 5vh;
     padding: 2vh 8vh;
 }
+
+
 }
 
