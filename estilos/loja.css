@@ -134,3 +134,108 @@ header .logo {
         width: 450px;
         box-shadow: 1px 2px 4px 2px black;
 }
+
+@media (max-width:500px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Designer';
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        max-width: 100vw;
+        overflow-x: hidden; /* Garante que nada crie rolagem horizontal na tela */
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    /* Ajuste do Header */
+    header {
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box;
+    }
+
+    .user_logo {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center;
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box;
+    }
+
+    /* Corrige o tamanho do bloco da logo "H" no mobile */
+    header .logo {
+        width: 80px !important;  /* Diminuído para caber na tela do celular */
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    header .user_logo > .User {
+        margin: 0 !important;
+    }
+
+    /* Ajuste do Menu (Nav) */
+    nav {
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box;
+        padding: 10px !important;
+    }
+
+    /* Reseta o comportamento de Grid/Lista anterior que estava quebrando o menu */
+    nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Zera a margem horizontal que empurrava o menu para fora */
+    nav li {
+        margin-right: 0 !important; 
+        list-style: none !important;
+    }
+
+    nav a {
+        font-size: 13px !important; /* Diminuído levemente para garantir que caiba em qualquer celular */
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    /* Ajuste do Corpo e dos Cartões */
+    main {
+        display: grid;
+        margin-top: 0;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    #container {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important; /* Organiza em colunas responsivas */
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 15px !important;
+        max-width: 100vw !important;
+        box-sizing: border-box;
+        margin: 0 !important;
+    }
+
+    /* Força os cartões a perderem os 450px fixos e se adaptarem ao grid */
+    main > #container .item {
+        width: 100% !important; 
+        max-width: 100% !important;
+        margin: 0 !important; /* Remove as margens fixas que desalinhavam os cartões */
+        height: auto !important;
+    }
+}
