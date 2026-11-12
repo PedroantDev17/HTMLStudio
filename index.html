@@ -1,42 +1,278 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#D90B0B">
-  <meta name="description" content="HTML Studio — encontre, conheça e compre sites prontos para sua ideia.">
-  <title>HTML Studio — sites prontos para novas ideias</title>
-  <link rel="icon" href="logo-html-studio.png"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
-</head>
-<body>
-  <div class="announcement">UM BOM SITE PODE SER O COMEÇO DE ALGO GRANDE <span>✦</span></div>
-  <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="HTML Studio, início"><img src="logo-html-studio.png" alt=""><span>HTML<span class="brand-light">Studio</span><small>SITES À VENDA</small></span></a>
-    <form class="search" id="search-form" role="search"><label class="sr-only" for="search-input">Buscar sites</label><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Busque por loja, portfólio, restaurante..." autocomplete="off"><kbd>Buscar</kbd></form>
-    <div class="header-actions"><button class="text-action" id="seller-open"><span class="action-icon">＋</span><span>Vender meu site</span></button><button class="text-action account-action" id="account-open"><span class="action-icon">♙</span><span id="account-label">Entrar</span></button><button class="cart-button" id="cart-open" aria-label="Abrir sacola"><span aria-hidden="true">▱</span><b>Sacola</b><i id="cart-count">0</i></button><button class="mobile-menu" id="mobile-menu" aria-label="Ir ao catálogo">☰</button></div>
-  </header>
-  <nav class="category-nav" aria-label="Categorias de sites"><div id="category-list"></div><button class="seller-link" id="seller-open-nav">Publique seu site <span>↗</span></button></nav>
-  <main id="inicio">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> MARKETPLACE DE SITES PRONTOS</div><h1 id="hero-title">A sua ideia<br>merece um <em>site.</em></h1><p>Encontre sites prontos para editar e colocar no ar: lojas, portfólios, páginas para negócios e muito mais.</p><a href="#descobrir" class="button button-dark">Encontrar meu site <span>↓</span></a><div class="hero-proof"><div class="proof-avatars"><i>&lt;/&gt;</i><i>✦</i><i>✳</i></div><span>Sites feitos por criadores independentes.</span></div></div>
-      <div class="hero-art" aria-label="Prévia ilustrada de uma página de site"><div class="hero-caption">UM CATÁLOGO DE SITES<br>PARA TIRAR IDEIAS DO PAPEL</div><div class="hero-window hero-window-back"><div class="window-bar"><i></i><i></i><i></i><span>ateliecriativo.com</span></div><div class="window-body window-back-body"><b>Feito com cuidado.</b><div></div><i></i></div></div><div class="hero-window hero-window-front"><div class="window-bar"><i></i><i></i><i></i><span>casanativa.com.br</span></div><div class="window-body"><small>CASA NATIVA <span>☰</span></small><b>Seu espaço,<br>seu jeito.</b><p>Objetos para morar<br>mais devagar.</p><button>CONHEÇA A LOJA ↗</button><div class="window-product">✳</div></div></div><div class="hero-sticker">pronto<br>pra editar</div></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#D90B0B">
+    <meta name="description" content="HTML Studio — encontre, conheça e compre sites prontos para sua ideia.">
+    <title>HTML Studio — sites prontos para novas ideias</title>
+    <link rel="icon" href="favicon_io/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="catalog.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- Aviso e navegação principal -->
+    <div class="announcement">
+      UM BOM SITE PODE SER O COMEÇO DE ALGO GRANDE <span>✦</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="HTML Studio, início">
+        <img src="favicon_io/favicon-32x32.png" alt="">
+        <span>HTML<span class="brand-light">Studio</span><small>SITES À VENDA</small></span>
+      </a>
+
+      <form class="search" id="search-form" role="search">
+        <label class="sr-only" for="search-input">Buscar sites</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search-input" type="search" placeholder="Busque por loja, portfólio, restaurante..." autocomplete="off">
+        <kbd>Buscar</kbd>
+      </form>
+
+      <div class="header-actions">
+        <button class="text-action" id="seller-open">
+          <span class="action-icon">＋</span><span>Vender meu site</span>
+        </button>
+        <button class="text-action account-action" id="account-open">
+          <span class="action-icon">♙</span><span id="account-label">Entrar</span>
+        </button>
+        <button class="cart-button" id="cart-open" aria-label="Abrir sacola">
+          <span aria-hidden="true">▱</span><b>Sacola</b><i id="cart-count">0</i>
+        </button>
+        <button class="mobile-menu" id="mobile-menu" aria-label="Ir ao catálogo">☰</button>
+      </div>
+    </header>
+
+    <!-- Atalhos por categoria -->
+    <nav class="category-nav" aria-label="Categorias de sites">
+      <div id="category-list"></div>
+      <button class="seller-link" id="seller-open-nav">Publique seu site <span>↗</span></button>
+    </nav>
+
+    <!-- Página inicial e catálogo -->
+    <main id="inicio">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> MARKETPLACE DE SITES PRONTOS</div>
+          <h1 id="hero-title">A sua ideia<br>merece um <em>site.</em></h1>
+          <p>Encontre sites prontos para editar e colocar no ar: lojas, portfólios, páginas para negócios e muito mais.</p>
+          <a href="#descobrir" class="button button-dark">Encontrar meu site <span>↓</span></a>
+          <div class="hero-proof">
+            <div class="proof-avatars"><i>&lt;/&gt;</i><i>✦</i><i>✳</i></div>
+            <span>Sites feitos por criadores independentes.</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Prévia ilustrada de uma página de site">
+          <div class="hero-caption">UM CATÁLOGO DE SITES<br>PARA TIRAR IDEIAS DO PAPEL</div>
+          <div class="hero-window hero-window-back">
+            <div class="window-bar"><i></i><i></i><i></i><span>ateliecriativo.com</span></div>
+            <div class="window-body window-back-body">
+              <b>Feito com cuidado.</b><div></div><i></i>
+            </div>
+          </div>
+          <div class="hero-window hero-window-front">
+            <div class="window-bar"><i></i><i></i><i></i><span>casanativa.com.br</span></div>
+            <div class="window-body">
+              <small>CASA NATIVA <span>☰</span></small>
+              <b>Seu espaço,<br>seu jeito.</b>
+              <p>Objetos para morar<br>mais devagar.</p>
+              <button>CONHEÇA A LOJA ↗</button>
+              <div class="window-product">✳</div>
+            </div>
+          </div>
+          <div class="hero-sticker">pronto<br>pra editar</div>
+        </div>
+      </section>
+
+      <section class="shops-strip">
+        <div class="wrap shops-inner">
+          <div>
+            <span class="eyebrow">CRIADORES NO CATÁLOGO</span>
+            <h2>Conheça quem cria.</h2>
+          </div>
+          <div class="shop-pills" id="shop-pills"></div>
+          <button class="round-arrow" id="shops-next" aria-label="Ver mais criadores">→</button>
+        </div>
+      </section>
+
+      <section class="catalog wrap" id="descobrir">
+        <div class="catalog-heading">
+          <div>
+            <div class="eyebrow">SITES À VENDA</div>
+            <h2>Um site pronto para a sua <em>ideia.</em></h2>
+          </div>
+          <p>Conheça a prévia de cada site,<br>escolha o seu e comece a editar.</p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="filters" id="filter-list" aria-label="Filtrar tipo de site"></div>
+          <label class="sort-label" for="sort-select">
+            Ordenar por
+            <select id="sort-select">
+              <option value="featured">Em destaque</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="name">Nome</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="result-line">
+          <span id="result-count"></span>
+          <button id="clear-filters" class="clear-filters">Limpar filtros</button>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <div>⌕</div>
+          <h3>Não encontramos esse site.</h3>
+          <p>Tente buscar por outro nome ou escolha uma categoria.</p>
+          <button class="button button-outline" id="empty-clear">Ver todos os sites</button>
+        </div>
+        <div class="load-more-wrap">
+          <button class="button button-outline" id="load-more">Ver mais sites <span>↓</span></button>
+        </div>
+      </section>
+
+      <!-- Convite para anunciar um site -->
+      <section class="seller-banner wrap">
+        <div class="banner-art">
+          <div class="code-card">
+            <span>&lt;html&gt;</span><i>────────────</i><i>──────</i><i>───────────</i><span>&lt;/html&gt;</span>
+          </div>
+          <span class="banner-spark">✳</span>
+        </div>
+        <div>
+          <div class="eyebrow">VOCÊ CRIOU. AGORA PODE VENDER.</div>
+          <h2>Seu site pode ser<br>o próximo <em>favorito.</em></h2>
+          <p>Mostre sua criação para quem está procurando um site pronto para começar um novo projeto.</p>
+          <button class="button button-dark" id="seller-open-banner">Anunciar um site <span>↗</span></button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Links e informações do marketplace -->
+    <footer class="site-footer">
+      <div class="wrap footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#inicio">
+            <img src="favicon_io/favicon.ico" alt="">
+            <span>HTML<span class="brand-light">Studio</span><small>SITES À VENDA</small></span>
+          </a>
+          <p>Um catálogo de sites prontos<br>criados por gente independente.</p>
+        </div>
+        <div>
+          <b>Encontre um site</b>
+          <a href="#descobrir">Todos os sites</a>
+          <a href="#descobrir" data-footer-category="Lojas">Lojas virtuais</a>
+          <a href="#descobrir" data-footer-category="Portfólios">Portfólios</a>
+        </div>
+        <div>
+          <b>Para criadores</b>
+          <a href="#" id="footer-seller">Anuncie seu site</a>
+          <a href="#" id="footer-account">Acessar conta</a>
+        </div>
+        <div class="footer-note"><span>&lt;/&gt;</span><p>Uma ideia<br>pode ir longe.</p></div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 HTML Studio</span>
+        <span>Marketplace de sites prontos · Demonstração</span>
+      </div>
+    </footer>
+
+    <!-- Sacola lateral -->
+    <div class="overlay" id="overlay" hidden></div>
+
+    <aside class="drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+      <div class="drawer-head">
+        <div><span class="eyebrow">SITES QUE VOCÊ ESCOLHEU</span><h2 id="cart-title">Sua sacola <span id="drawer-count">(0)</span></h2></div>
+        <button class="icon-button" data-close aria-label="Fechar sacola">×</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">
+        <span>&lt;/&gt;</span><h3>Seu próximo site está no catálogo.</h3>
+        <p>Encontre uma criação que combine com sua ideia.</p>
+        <button class="button button-dark" data-close>Explorar sites</button>
+      </div>
+      <div class="cart-summary" id="cart-summary">
+        <div><span>Total dos sites</span><b id="cart-subtotal">R$ 0,00</b></div>
+        <small>Sites digitais. A entrega seria feita após a confirmação do pagamento.</small>
+        <button class="button button-dark button-wide" id="checkout-open">Continuar <span>→</span></button>
+      </div>
+    </aside>
+
+    <!-- Detalhes do site selecionado -->
+    <section class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-title" hidden>
+      <button class="modal-close" data-close aria-label="Fechar">×</button>
+      <div class="product-detail" id="product-detail"></div>
     </section>
-    <section class="shops-strip"><div class="wrap shops-inner"><div><span class="eyebrow">CRIADORES NO CATÁLOGO</span><h2>Conheça quem cria.</h2></div><div class="shop-pills" id="shop-pills"></div><button class="round-arrow" id="shops-next" aria-label="Ver mais criadores">→</button></div></section>
-    <section class="catalog wrap" id="descobrir">
-      <div class="catalog-heading"><div><div class="eyebrow">SITES À VENDA</div><h2>Um site pronto para a sua <em>ideia.</em></h2></div><p>Conheça a prévia de cada site,<br>escolha o seu e comece a editar.</p></div>
-      <div class="catalog-toolbar"><div class="filters" id="filter-list" aria-label="Filtrar tipo de site"></div><label class="sort-label" for="sort-select">Ordenar por <select id="sort-select"><option value="featured">Em destaque</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="name">Nome</option></select></label></div>
-      <div class="result-line"><span id="result-count"></span><button id="clear-filters" class="clear-filters">Limpar filtros</button></div>
-      <div class="product-grid" id="product-grid" aria-live="polite"></div>
-      <div class="empty-state" id="empty-state" hidden><div>⌕</div><h3>Não encontramos esse site.</h3><p>Tente buscar por outro nome ou escolha uma categoria.</p><button class="button button-outline" id="empty-clear">Ver todos os sites</button></div>
-      <div class="load-more-wrap"><button class="button button-outline" id="load-more">Ver mais sites <span>↓</span></button></div>
+
+    <!-- Formulário de anúncio -->
+    <section class="modal form-modal" id="seller-modal" role="dialog" aria-modal="true" aria-labelledby="seller-title" hidden>
+      <button class="modal-close" data-close aria-label="Fechar">×</button>
+      <div class="modal-kicker">HTML STUDIO PARA CRIADORES</div>
+      <h2 id="seller-title">Coloque seu site<br>na <em>vitrine.</em></h2>
+      <p class="modal-intro">Cadastre sua criação e anuncie o site para quem está pronto para começar. Nesta demonstração, os dados ficam salvos apenas neste navegador.</p>
+      <form id="seller-form" class="stacked-form">
+        <div class="field-row">
+          <label>Nome do estúdio ou criador<input name="store" required maxlength="40" placeholder="Ex.: Estúdio Ipê"></label>
+          <label>Seu nome<input name="owner" required maxlength="60" placeholder="Como podemos te chamar?"></label>
+        </div>
+        <label>E-mail<input name="email" type="email" required placeholder="voce@estudio.com"></label>
+        <div class="form-divider"><span>O SITE QUE VOCÊ QUER ANUNCIAR</span></div>
+        <label>Nome do site<input name="product" required maxlength="70" placeholder="Ex.: Casa Nativa — loja de decoração"></label>
+        <div class="field-row">
+          <label>Preço do site (R$)<input name="price" required type="number" min="1" max="100000" step="0.01" placeholder="349,00"></label>
+          <label>Tipo de site
+            <select name="category" required>
+              <option value="">Escolha uma categoria</option>
+              <option>Lojas</option><option>Portfólios</option><option>Restaurantes</option>
+              <option>Serviços</option><option>Landing pages</option><option>Blogs</option>
+            </select>
+          </label>
+        </div>
+        <label>O que está incluído?<textarea name="description" rows="3" maxlength="240" placeholder="Páginas, recursos, arquivos incluídos, plataforma..."></textarea></label>
+        <label>Imagem de prévia do site
+          <input name="image" type="file" accept="image/*">
+          <small>Opcional · JPG, PNG ou WebP (até 1 MB)</small>
+        </label>
+        <label>Link para demonstração ao vivo<input name="demo" type="url" placeholder="https://meusite.com (opcional)"></label>
+        <button class="button button-dark button-wide" type="submit">Anunciar meu site <span>↗</span></button>
+        <p class="form-disclaimer">Anúncio demonstrativo. Não há cobrança nem publicação online.</p>
+      </form>
     </section>
-    <section class="seller-banner wrap"><div class="banner-art"><div class="code-card"><span>&lt;html&gt;</span><i>────────────</i><i>──────</i><i>───────────</i><span>&lt;/html&gt;</span></div><span class="banner-spark">✳</span></div><div><div class="eyebrow">VOCÊ CRIOU. AGORA PODE VENDER.</div><h2>Seu site pode ser<br>o próximo <em>favorito.</em></h2><p>Mostre sua criação para quem está procurando um site pronto para começar um novo projeto.</p><button class="button button-dark" id="seller-open-banner">Anunciar um site <span>↗</span></button></div></section>
-  </main>
-  <footer class="site-footer"><div class="wrap footer-main"><div class="footer-brand"><a class="brand" href="#inicio"><img src="logo-html-studio.png" alt=""><span>HTML<span class="brand-light">Studio</span><small>SITES À VENDA</small></span></a><p>Um catálogo de sites prontos<br>criados por gente independente.</p></div><div><b>Encontre um site</b><a href="#descobrir">Todos os sites</a><a href="#descobrir" data-footer-category="Lojas">Lojas virtuais</a><a href="#descobrir" data-footer-category="Portfólios">Portfólios</a></div><div><b>Para criadores</b><a href="#" id="footer-seller">Anuncie seu site</a><a href="#" id="footer-account">Acessar conta</a></div><div class="footer-note"><span>&lt;/&gt;</span><p>Uma ideia<br>pode ir longe.</p></div></div><div class="wrap footer-bottom"><span>© 2026 HTML Studio</span><span>Marketplace de sites prontos · Demonstração</span></div></footer>
-  <div class="overlay" id="overlay" hidden></div>
-  <aside class="drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">SITES QUE VOCÊ ESCOLHEU</span><h2 id="cart-title">Sua sacola <span id="drawer-count">(0)</span></h2></div><button class="icon-button" data-close aria-label="Fechar sacola">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span>&lt;/&gt;</span><h3>Seu próximo site está no catálogo.</h3><p>Encontre uma criação que combine com sua ideia.</p><button class="button button-dark" data-close>Explorar sites</button></div><div class="cart-summary" id="cart-summary"><div><span>Total dos sites</span><b id="cart-subtotal">R$ 0,00</b></div><small>Sites digitais. A entrega seria feita após a confirmação do pagamento.</small><button class="button button-dark button-wide" id="checkout-open">Continuar <span>→</span></button></div></aside>
-  <section class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-title" hidden><button class="modal-close" data-close aria-label="Fechar">×</button><div class="product-detail" id="product-detail"></div></section>
-  <section class="modal form-modal" id="seller-modal" role="dialog" aria-modal="true" aria-labelledby="seller-title" hidden><button class="modal-close" data-close aria-label="Fechar">×</button><div class="modal-kicker">HTML STUDIO PARA CRIADORES</div><h2 id="seller-title">Coloque seu site<br>na <em>vitrine.</em></h2><p class="modal-intro">Cadastre sua criação e anuncie o site para quem está pronto para começar. Nesta demonstração, os dados ficam salvos apenas neste navegador.</p><form id="seller-form" class="stacked-form"><div class="field-row"><label>Nome do estúdio ou criador<input name="store" required maxlength="40" placeholder="Ex.: Estúdio Ipê"></label><label>Seu nome<input name="owner" required maxlength="60" placeholder="Como podemos te chamar?"></label></div><label>E-mail<input name="email" type="email" required placeholder="voce@estudio.com"></label><div class="form-divider"><span>O SITE QUE VOCÊ QUER ANUNCIAR</span></div><label>Nome do site<input name="product" required maxlength="70" placeholder="Ex.: Casa Nativa — loja de decoração"></label><div class="field-row"><label>Preço do site (R$)<input name="price" required type="number" min="1" max="100000" step="0.01" placeholder="349,00"></label><label>Tipo de site<select name="category" required><option value="">Escolha uma categoria</option><option>Lojas</option><option>Portfólios</option><option>Restaurantes</option><option>Serviços</option><option>Landing pages</option><option>Blogs</option></select></label></div><label>O que está incluído?<textarea name="description" rows="3" maxlength="240" placeholder="Páginas, recursos, arquivos incluídos, plataforma..."></textarea></label><label>Imagem de prévia do site <input name="image" type="file" accept="image/*"><small>Opcional · JPG, PNG ou WebP (até 1 MB)</small></label><label>Link para demonstração ao vivo <input name="demo" type="url" placeholder="https://meusite.com (opcional)"></label><button class="button button-dark button-wide" type="submit">Anunciar meu site <span>↗</span></button><p class="form-disclaimer">Anúncio demonstrativo. Não há cobrança nem publicação online.</p></form></section>
-  <section class="modal form-modal compact-modal" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-title" hidden><button class="modal-close" data-close aria-label="Fechar">×</button><div class="modal-kicker">BEM-VINDO AO HTML STUDIO</div><h2 id="account-title">Que bom ver<br>você <em>por aqui.</em></h2><p class="modal-intro">Entre com seu e-mail para acompanhar seus pedidos nesta demonstração.</p><form id="account-form" class="stacked-form"><label>Seu nome<input name="name" required maxlength="60" placeholder="Seu nome"></label><label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label><button class="button button-dark button-wide" type="submit">Continuar <span>→</span></button><p class="form-disclaimer">Conta demonstrativa salva apenas neste navegador.</p></form></section>
-  <section class="modal form-modal compact-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" hidden><button class="modal-close" data-close aria-label="Fechar">×</button><div class="modal-kicker">QUASE LÁ</div><h2 id="checkout-title">Vamos preparar<br>seu <em>pedido.</em></h2><p class="modal-intro">Confirme seus dados para registrar este pedido de demonstração.</p><form id="checkout-form" class="stacked-form"><label>Nome completo<input name="name" required maxlength="80" placeholder="Seu nome"></label><label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label><div class="checkout-total"><span>Total dos sites</span><b id="checkout-total">R$ 0,00</b></div><button class="button button-dark button-wide" type="submit">Registrar pedido <span>→</span></button><p class="form-disclaimer">O pedido é apenas demonstrativo. Não há cobrança ou entrega real.</p></form></section>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body>
+
+    <!-- Entrada do comprador -->
+    <section class="modal form-modal compact-modal" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-title" hidden>
+      <button class="modal-close" data-close aria-label="Fechar">×</button>
+      <div class="modal-kicker">BEM-VINDO AO HTML STUDIO</div>
+      <h2 id="account-title">Que bom ver<br>você <em>por aqui.</em></h2>
+      <p class="modal-intro">Entre com seu e-mail para acompanhar seus pedidos nesta demonstração.</p>
+      <form id="account-form" class="stacked-form">
+        <label>Seu nome<input name="name" required maxlength="60" placeholder="Seu nome"></label>
+        <label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label>
+        <button class="button button-dark button-wide" type="submit">Continuar <span>→</span></button>
+        <p class="form-disclaimer">Conta demonstrativa salva apenas neste navegador.</p>
+      </form>
+    </section>
+
+    <!-- Confirmação do pedido demonstrativo -->
+    <section class="modal form-modal compact-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" hidden>
+      <button class="modal-close" data-close aria-label="Fechar">×</button>
+      <div class="modal-kicker">QUASE LÁ</div>
+      <h2 id="checkout-title">Vamos preparar<br>seu <em>pedido.</em></h2>
+      <p class="modal-intro">Confirme seus dados para registrar este pedido de demonstração.</p>
+      <form id="checkout-form" class="stacked-form">
+        <label>Nome completo<input name="name" required maxlength="80" placeholder="Seu nome"></label>
+        <label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label>
+        <div class="checkout-total"><span>Total dos sites</span><b id="checkout-total">R$ 0,00</b></div>
+        <button class="button button-dark button-wide" type="submit">Registrar pedido <span>→</span></button>
+        <p class="form-disclaimer">O pedido é apenas demonstrativo. Não há cobrança ou entrega real.</p>
+      </form>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
